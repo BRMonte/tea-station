@@ -112,3 +112,54 @@ p {
     line-height: 1;
   }
 }
+
+/*more global css
+
+
+
+*/
+
+/*==========
+HEADER
+==========*/
+
+.header {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  url("./main-bcg.jpeg") center/cover no-repeat fixed;
+  position: relative;
+  /*===========
+  ANIMATION
+  ===========*/
+  overflow-x: hidden;
+}
+
+.banner {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner h2{
+  font-family: var(--ff--secondary);
+  color: var(--clr-primary);
+  /*===========
+  ANIMATION
+  ===========*/
+}
+
+.banner h1 {
+  text-transform: uppercase;
+  color: var(--clr-white);
+  margin-top: 1.25rem;
+  margin-bottom: 2rem;
+  /*===========
+  ANIMATION
+  ===========*/
+}
+
+.btn {
+
+}

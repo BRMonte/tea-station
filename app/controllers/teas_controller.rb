@@ -39,4 +39,10 @@ class TeasController < ApplicationController
       redirect_to teas_path
     end
   end
+
+  private
+
+  def tea_params
+    params.require(:tea).permit(:name, :description)
+  end
 end
