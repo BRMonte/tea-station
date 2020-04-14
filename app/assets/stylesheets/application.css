@@ -18,6 +18,7 @@
  FONTS
 =========*/
 @import url("https://fonts.googleapis.com/css?family=Catamaran:400,700|Grand+Hotel");
+@import "font-awesome";
 
  /*========
  VARIABLES GLOBAL STYLE
@@ -114,10 +115,32 @@ p {
 }
 
 /*more global css
+================*/
+.btn {
+  text-transform: uppercase;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  padding: 0.75rem 1rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 700;
+  transition: var(--transition);
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
 
+.btn:hover {
+  color: var(--clr-primary);
+  background: var(--clr-primary-light)
+}
 
-
-*/
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 /*==========
 HEADER
@@ -160,6 +183,74 @@ HEADER
   ===========*/
 }
 
-.btn {
+.banner-btn {
+  outline: 0.125rem solid var(--clr-primary);
+  outline-offset: 0.25rem;
+  font-size: 1.25rem;
+  padding: 1rem 1.75rem;
+}
 
+
+/*CONTENT-DIVIDER
+==================*/
+
+.content-divider {
+  height: 0.5rem;
+  background: linear-gradient(
+    to left,
+    var(--clr-primary),
+    #e9b949,
+    var(--clr-primary));
+}
+
+/*==========
+Skills
+==========*/
+
+.skills {
+  background: var(--clr-grey-10);
+}
+
+.skill {
+  padding: 2.5rem 0;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  transition: var(--transition);
+  display: inline-block;
+  color: var(--clr-primary);
+  font-family: FontAwesome; /*only by adding this line i could make the icons show up*/
+
+}
+
+.skill-text {
+  color: var(--clr-grey-5);
+  max-width: 17rem;
+  margin: 0 auto;
+}
+
+.skill:hover {
+  background: var(--clr-white);
+  box-shadow: 0 2px var(--clr-primary);
+}
+
+.skill:hover .skill-icon {
+  transform: translateY(-5px);
+}
+
+@media screen and (min-width: 576px) {
+  .skill {
+    float: left;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 12006px) {
+  .skill {
+    width: 25%;
+  }
 }
